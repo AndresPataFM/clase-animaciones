@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Grids, media y animaciones</title>
+</head>
+<body>
+    <main>
+        <!-- Grid que muestra todo -->
+        <section>
+            <h2>Grid</h2>
+            <div class="gridPrueba">
+                <!--  -->
+                <div class="afuera" id="g1">
+                    <div class="adentro">
+                        <button>1</button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="afuera" id="g2"><div class="adentro"><button>2</button></div></div>
+                <div class="afuera" id="g3"><div class="adentro"><button>3</button></div></div>
+                <div class="afuera" id="g4"><div class="adentro"><button>4</button></div></div>
+                <div class="afuera" id="g5"><div class="adentro"><button>5</button></div></div>
+                <div class="afuera" id="g6"><div class="adentro"><button>6</button></div></div>
+                <div class="afuera" id="g7"><div class="adentro"><button>7</button></div></div>
+                <div class="afuera" id="g8"><div class="adentro"><button>8</button></div></div>
+                <div class="afuera" id="g9"><div class="adentro"><button>9</button></div></div>
+                <div class="afuera" id="g10"><div class="adentro"><button>10</button></div></div>
+                <div class="afuera" id="g11"><div class="adentro"><button>11</button></div></div>
+                <div class="afuera" id="g12"><div class="adentro"><button>12</button></div></div>
+            </div>
+        </section>
+        <section>
+
+        </section>
+        <!-- Vocabulario -->
+        <section>
+            <h3>Vocabulario</h3>
+            <details>
+                <summary>Info</summary>            
+                <ul>
+                    <li><b>Queries:</b> consultas</li>
+                    <li><b>Grid:</b> grilla</li>
+                    <li><b>Width:</b> ancho</li>
+                    <li><b>Height:</b> alto</li>
+                    <li><b>Rows:</b> filas</li>
+                    <li><b>Columns:</b> columnas</li>
+                    <li><b>Temmplate:</b> modelo</li>
+                    <li><b>Transform:</b> transformación</li>
+                    <li><b>Rotate:</b> rotar</li>
+                </ul>
+            </details>
+        </section>
+        <!-- Ejes tridimensionales -->
+        <section>
+            <h3>Ejes</h3>
+            <details>
+                <summary>Info</summary>
+                <ul>
+                    <li>Eje X: horizontal <div class="xCuadrado"></div></li>
+                    <li>Eje Y: vertical <div class="yCuadrado"></div></li>
+                    <li>Eje Z: profundidad <div class="zCuadrado"></div></li>
+                </ul>
+                <div class="ejes">
+                    <div class="ejeX"></div>
+                    <div class="ejeY"></div>
+                    <div class="ejeZ"></div>
+                </div>
+            </details>
+        </section>
+        <!-- contenedor grid  -->
+        <section>
+            <h3>Propiedades del contenedor de Grid</h3>
+            <details>
+                <summary>Info</summary>
+                <!-- Se ve fea la indentación por como funciona el pre -->
+                <pre>
+                    <code>
+    display: grid | inline-grid;
+    grid-template-rows:
+    grid-template-columns:
+    grid-template-areas: 
+        "nombreGridArea | . | none | ..." /* un . es un area vacia y none hace que no se defina*/
+        "...";
+                    </code>
+                </pre>
+            </details>
+        </section>
+        <!-- hijo grid -->
+        <section>
+            <h3>Propiedades del hijo de Grid</h3>
+            <details>
+                <summary>Info</summary> 
+                <!-- estoy usando entidades de html, "&lt;" es "<" y "&gt;" es ">" -->
+                <pre>
+                    <code>
+    grid-area: &lt;name&gt;;
+    justify-self: start | end | center | stretch;
+    align-self: start | end | center | stretch;
+                    </code>
+                </pre>
+            </details>
+        </section>
+        <!-- grids mas avanzado -->
+        <section>
+            <h3>Codigo Avanzado de Grids</h3>
+            <details>
+                <summary>Info</summary>            
+                <h4>Contenedor</h4>
+                <pre>
+                    <code>
+    grid-template: rows / columns   /* combina grid temmplate rows, columns y area */
+                    </code>
+                </pre>
+                <h4>Hijo</h4>
+                <pre>
+                    <code>
+    grid-area: &lt;row-start&gt;/&lt;column-start&gt;/&lt;row-end&gt;/&lt;column-end&gt;;
+                    </code>
+                </pre>
+            </details>
+        </section>
+        <!-- transformaciones -->
+        <section>
+            <h3>Transformaciones</h3>
+            <details>
+                <summary>Info</summary>
+                <pre>
+                    <code>
+        transition-duration: tiempo;
+        transform: matrix()
+        transform: matrix3d()
+        transform: perspective();
+        transform: rotate();
+        transform: translate();
+        transform: translate3d();
+        transform: translateX();
+        transform: translateY();
+        transform: translateZ();
+        transform: scale();
+        transform: scale3d(3);
+        transform: scaleX();
+        transform: scaleY();
+        transform: scaleZ();
+        transform: skew();
+        transform: skewX();
+        transform: skewY();
+                    </code>
+                </pre>
+            </details>
+        </section>
+        <!-- animaciones -->
+        <section>
+            <h3>Animaciones</h3>
+            <details>
+                <summary>Info</summary>
+                <pre>
+                    <code>
+        animation-name: nombre;
+        animation-duration: #s (tiempo en segundos);
+        animation-timing-function: ease (this is default) | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n);
+        animation-delay: #s;
+        animation-iteration-count: infinite (o un #);
+        animation-direction: normal | reverse | alternate | alternate-reverse;
+        animation-fill-mode: 	forwards | backwards | both | none;
+        animation-play-state: paused | running;
+    
+        @keyframes nombreAnimación {
+            0%{alguna cosa}
+            #%{alguna cosa}
+            100%{alguna cosa}
+        }
+    
+        o
+    
+        @keyframes nombreAnimación {
+            from{alguna cosa}
+            to{alguna cosa}
+        }
+        /* el from equivale a 0% y el to equivale a 100% */
+                    </code>
+                </pre>
+            </details>
+        </section>
+        <!-- animacion avanzada -->
+        <section>
+            <h3>Animaciones avanzadas</h3>
+            <details>
+                <summary>Info</summary>
+                <pre>
+                    <code>
+    animation:     animation-name | animation-duration | animation-timing-function | animation-delay | animation-iteration-count | animation-direction | animation-fill-mode
+                    </code>
+                </pre>
+            </details>
+        </section>
+        <!-- media queries -->
+        <section>
+            <h3>Media queries</h3>
+            <details>
+                <summary>Info</summary>
+                <p>Siempre pongan los medias al final del CSS. Si usan max, lso medias lo hacen en calores decrecientes y si usan min en valores crecientes. Pueden usar cualquier tipo de unidad de tamaño pero recomiendo fuertemente px.</p>
+                <pre>
+                    <code>
+    @media (max-width: #px){
+        .clases o id o elementos, etc{
+            cambios a esta resolución
+        }
+    }
+    @media (min width: #px){}
+    @media (min-width: #px) and (max-width: #px){}
+                    </code>
+                </pre>
+            </details>
+        </section>
+        <!-- biblio -->
+        <h3>Bibliografia</h3>
+        <ul>
+            <li><a target="_blank" href="https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries/Using_media_queries">Mozilla Media</a></li>
+            <li><a target="_blank" href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks Grids</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/es/docs/Web/CSS/grid">Mozilla Grids</a></li>
+            <li><a target="_blank" href="https://www.hostinger.in/tutorials/css-cheat-sheet">CSS cheat sheet</a></li>
+            <li><a target="_blank" href="https://pixabay.com/es/">pixelbay.com</a> para imágenes gratuitas</li>
+            <li><a target="_blank" href="https://losapuntesdemajo.vercel.app/">Apuntes de Majo</a></li>
+            <li><a target="_blank" href="https://css-tricks.com/almanac/properties/a/animation/">CSS-Tricks animaciones</a></li>
+        </ul>
+    </main>
+</body>
+</html>

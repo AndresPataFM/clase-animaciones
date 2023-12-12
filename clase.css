@@ -1,0 +1,44 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+body{
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+/* @keyframes cambio-color{
+  from{
+    background-color: red;
+  }
+  to{
+    background-color: orange;
+  }
+} */
+@keyframes cambio-color{
+  from{
+    background-color: red;
+  }
+  25%,50%{
+    background-color: orange;
+  }
+  to{
+    background-color: red;
+  }
+}
+.div1{
+  /* Gradiente radial */
+  /* background: radial-gradient(circle, orange 0%, red 100%); */
+  background-color: red;
+  width: 500px;
+  height: 500px;
+  animation-name: cambio-color;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.div2{
+  /* gradiente lineal */
+  background: linear-gradient(220deg, green 0%, blue 100%);
+  width: 500px;
+  height: 500px;
+}
